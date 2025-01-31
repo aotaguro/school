@@ -21,7 +21,12 @@
                 </ul>
             </nav>
         </div>
+        <!-- Username Display -->
+        <div class="username-display">
+            <span id="username">Username: </span>
+        </div>
     </header>
+    
     
 
     <!-- Hero Section -->
@@ -74,7 +79,7 @@
             </div>
             <div class="testimonial">
                 <p>"Thanks to GreyScale, we have never been so close to ǝdɐɔsƎ. Their team was extremely professional, and they took our vision and made it a reality. However we ran into a small hiccup... We highly recommend them!"</p>
-                <p>- Mark Davis, Founder of Run.com/Now</p>
+                <p>- Mark Davis, Founder of Wakeup inc</p>
             </div>
         </div>
     </section>
@@ -113,9 +118,21 @@
     <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 GreyScale. All Rights Reserved.</p>
+            <p>&copy; 2025 GreyScale. All Rights Reserved</p>
         </div>
     </footer>
+        <script>
+            //when index.html is loaded it gets the username from local storage and sets it to a new constant
+            window.onload = function() {
+            const savedUsername = localStorage.getItem("username");
+            //displayes the new constant username on html element username
+            if (savedUsername) {
+                document.getElementById('username').innerText = `Welcome ${savedUsername}`;
+            } else {
+                //testing
+                console.log("Username not found in localStorage.");
+            }
+        };
+        </script>
 </body>
-
 </html>

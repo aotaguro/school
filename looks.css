@@ -145,3 +145,12 @@ footer p {
         width: 90%; /* Slightly smaller container width on mobile */
     }
 }
+
+.username-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: #fff; /* Adjust color as needed */
+    font-weight: bold;
+}

@@ -1,0 +1,122 @@
+/* Basic reset and layout setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    min-height: 100vh; /* Ensure full viewport height */
+    padding-bottom: 10000px; /* Give some space to ensure scroll */
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#signup-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.form-container {
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.form-container h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the bottom sentence with smooth transition */
+.bottom-sentence {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-transform: uppercase;
+    opacity: 0;  /* Initially hidden */
+    visibility: hidden; /* Hide it visually until triggered */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out; /* Smooth transition */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 2em;
+    }
+
+    .form-container input, .form-container button {
+        font-size: 1em;
+    }
+}
