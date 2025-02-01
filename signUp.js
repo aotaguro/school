@@ -21,7 +21,7 @@ document.getElementById('signup-form').addEventListener('submit', function (even
         if (username.length > 17) {
             alert('username too long');
         } else { 
-                alert('your username does not contain the answer to life'); //You can never make an account
+                alert('your username does not contain the answer to life'); //You can never make an account  ー═┻┳︻▄ξ(╬ಠ益ಠ)ξ▄︻┻┳═一
         }
 
     }

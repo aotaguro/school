@@ -1,0 +1,175 @@
+/* Basic reset and layout setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9; /* Lighter background for a softer look */
+    color: #333; /* Dark text for better readability */
+    font-size: 16px; /* Base font size */
+}
+
+.container {
+    width: 85%; /* Wider container for modern look */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 40px 0; /* Slightly more padding for balance */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3.5em; /* Larger, bolder header for impact */
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex; /* Horizontal navigation */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em; /* Slightly larger text */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Subtle hover effect with a green accent */
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.service-item h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.service-item button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-item button:hover {
+    background-color: #1769c1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Enhanced footer shadow */
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1.1em;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Slightly smaller header on mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .services {
+        justify-content: center;
+    }
+
+    .service-item {
+        width: 80%; /* Make service items take up more width on mobile */
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1.1em;
+        padding: 0 15px;
+    }
+
+    .container {
+        width: 90%; /* Slightly smaller container width on mobile */
+    }
+}
