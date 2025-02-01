@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="signUp.css">
 </head>
 <body>
-
+ 
     <header>
         <div class="container">
             <h1>GreyScale</h1>
@@ -27,6 +27,13 @@
                 <input type="password" id="confirm-password" placeholder="Confirm Password" required>
                 <button type="submit">Sign Up</button>
             </form>
+            <a id="guest" href="index.html" onclick="setGuestMode()">Continue as Guest</a>
+            <script>
+                function setGuestMode() {
+                    localStorage.setItem("guestMode", "true");
+                }
+            </script>
+            
         </div>
     </section>
 

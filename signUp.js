@@ -1,3 +1,4 @@
+var ready = 0;
 document.getElementById('signup-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -5,7 +6,6 @@ document.getElementById('signup-form').addEventListener('submit', function (even
     const username = document.getElementById('name').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-
     // Check if passwords match
     if (password !== confirmPassword) {
         alert('Passwords do not match.');
@@ -20,18 +20,8 @@ document.getElementById('signup-form').addEventListener('submit', function (even
     } else if (username.includes('🏋️')) {
         if (username.length > 17) {
             alert('username too long');
-        } else {
-            if (username.length > tempuser) {
-                // Store the username in localStorage
-                localStorage.setItem('username', username); // Store the username
-                // Alert account creation and set the username in the top-right corner
-                alert(`Account created successfully for ${username}`);
-                window.location.href = 'index.html';  // Redirect to index.html
-            } else {
-                alert('your username does not contain the answer to life');
-                let tempuser = username.length;
-            }
-
+        } else { 
+                alert('your username does not contain the answer to life'); //You can never make an account
         }
 
     }
@@ -56,3 +46,4 @@ window.addEventListener('scroll', function () { //hidden message code
         bottomMessage.style.visibility = 'hidden';
     }
 });
+ 

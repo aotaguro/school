@@ -153,4 +153,22 @@ footer p {
     font-size: 16px;
     color: #fff; /* Adjust color as needed */
     font-weight: bold;
+    display:none;
+}
+#logOut { 
+    position: absolute;
+    top: 60px; /* Adjust this value to move it below the existing element */
+    right: 20px;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: red; /* Change color as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+#logOut:hover{
+    background-color: darkred;
 }

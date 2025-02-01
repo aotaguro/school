@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreyScale</title>
     <link rel="stylesheet" href="looks.css">
     <script src="javacrscript.js" defer></script>
+    <script src="signUp.js"defer></script> 
 </head>
 
 <body>
@@ -21,10 +22,20 @@
                 </ul>
             </nav>
         </div>
-        <!-- Username Display -->
-        <div class="username-display">
-            <span id="username">Username: </span>
-        </div>
+      <!-- Username Display -->
+<div class="username-display" id="usernameDisplay" style="display: none;">
+    <span id="userDisplay">Welcome Guest</span>
+</div>  
+<button id="logOut" onclick="localStorage.removeItem('guestMode'); location.reload();">Logout</button>
+
+<script>
+    // Check if guest mode was set
+    if (localStorage.getItem("guestMode") === "true") {
+        document.getElementById("usernameDisplay").style.display = "block";
+        document.getElementById("logOut").style.display = "block";
+    }
+</script>
+
     </header>
     
     
@@ -111,7 +122,7 @@
     <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>Have questions? Feel free to reach out to us via the form below, or send us an email at <a href="Wakeup.html">║▌║▌║█│║▌▌║█│▌║║▌║█│▌║▌║║█│▌║▌║│▌║▌▌║█▌</a>.</p>
+            <p>Have questions or want to work with us? Feel free to contact us here...<br><a href="Wakeup.html">║▌║▌║█│║▌▌║█▌║▌║║█│▌║▌║│▌║▌▌║█▌</a>.</p>
         </div>
     </section>
 
